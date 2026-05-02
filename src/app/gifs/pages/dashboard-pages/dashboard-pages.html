@@ -1,0 +1,35 @@
+<div>
+    <nav class="bg-linear-to-b from-[#003399] to-[#001f66] text-white h-9 flex items-center px-3 border-b-2 border-[#ffcc00] ">
+
+        <!-- gifs-side-logo -->
+        <app-gifs-side-logo/>
+
+        <!-- gifs-side-menu-options -->
+        <app-gifs-side-menu-options/>
+
+
+        
+     <div class="ml-auto hidden md:flex items-center gap-5 text-xs"> 
+        <app-side-info/>
+    </div>
+
+        <button 
+            class="ml-auto md:hidden flex flex-col gap-1 p-1"
+            (click)="menuAbierto.set(!menuAbierto())">
+            <span class="block w-5 h-0.5 bg-white"></span>
+            <span class="block w-5 h-0.5 bg-white"></span>
+            <span class="block w-5 h-0.5 bg-white"></span>
+        </button>
+    </nav>
+
+    <app-gifs-side-menu-small 
+    [menuAbierto]="menuAbierto()"
+    (value)="menuAbierto.set($event)"
+    />
+
+    <div>
+        <router-outlet/>
+    </div>
+</div>
+
+

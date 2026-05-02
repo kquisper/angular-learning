@@ -1,0 +1,22 @@
+    <div 
+    class="md:hidden bg-[#002277] text-white flex flex-col border-b-2 border-[#ffcc00]"
+    [class.hidden]="!menuAbierto()">
+    
+    <a routerLink="trending" class="px-4 py-2 hover:bg-[#ffcc00] hover:text-black font-medium border-b border-[#001f66]"
+    (click)="closeMenu()"
+    >
+        Trending
+    </a>
+    <a routerLink="search" class="px-4 py-2 hover:bg-[#ffcc00] hover:text-black font-medium border-b border-[#001f66]"
+    (click)="closeMenu()"
+        >
+        Search
+    </a>
+
+
+<!--     <div class="px-4 py-2 text-xs text-[#ffcc00] flex gap-4">
+        <span>Usuario: <strong>KJQR</strong></span>
+        <span>ZK PY</span>
+         <span>{{ currentDate | date:'dd/MM/yyyy' }}</span>
+    </div> -->
+</div>

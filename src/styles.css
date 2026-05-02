@@ -1,3 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+
+@layer components {
+  /* Configuración base del cuerpo */
+  body { 
+   
+    font-family: 'Tahoma', 'Segoe UI', sans-serif; 
+    font-size: 11px; 
+  }
+
+  /* Estructura base de cualquier botón */
+  .btn {
+
+    @apply px-4 py-1.5 font-medium transition-all duration-200 border-[#666] flex items-center justify-center ;
+    @apply active:scale-95 disabled:opacity-50 ;
+  }
+
+  /* Variantes semánticas (Colores) */
+  .btn-secondary {
+    @apply bg-gray-300 text-black border border-[#999] shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white border border-[#002266] shadow-sm ;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white border border-[#cc0000] shadow-sm;
+  }
+
+  .btn-gray {
+    @apply bg-gray-500 text-white border border-[#666] hover:bg-gray-600 shadow-sm;
+  }
+
+  /* Otros elementos globales */
+  .dropdown { font-size: 10.8px; }
+  
+   nav a.active {
+   /* Añadimos underline y un ligero desplazamiento para que se vea más limpio */
+   @apply underline underline-offset-4 decoration-1;
+   }
+
+
+  dd {
+    @apply text-[12px] font-bold;
+  }
+
+   .erp-panel {
+    @apply bg-[#e0e0e0] border border-[#999] p-4 shadow-[1px_1px_0_white_inset];
+  }
+
+  /* El input clásico: cuadrado, fuente pequeña y borde definido */
+  .input-erp {
+    @apply w-full border border-[#7a7a7a] bg-white px-2 py-1 text-[11px] rounded-none;
+    @apply transition-colors duration-100;
+    /* Efecto de hundimiento clásico */
+/*     border-top-color: #7a7a7a;
+    border-left-color: #7a7a7a;
+    border-bottom-color: #d4d4d4;
+    border-right-color: #d4d4d4; */
+  }
+
+  .input-erp:focus {
+    @apply outline-none border-[#003399]; /* Fondo ligeramente amarillo al enfocar */
+  }
+
+  /* Etiquetas de formulario (Labels) */
+  .label-erp {
+    @apply  text-[10px] font-bold uppercase mb-0.5;
+  }
+
+  .text-stronger {
+    @apply font-extrabold text-red-600 ;
+
+  }
+
+    .text-primary {
+    @apply  text-sky-600 ;
+
+  }
+
+}
