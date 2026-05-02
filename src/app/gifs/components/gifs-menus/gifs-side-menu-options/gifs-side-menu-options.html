@@ -1,20 +1,17 @@
 
 <div class="hidden md:flex items-center gap-0.5">
-            <div>
-                <a 
-                routerLink="trending" 
+    @for (item of menuoptions; track item.route) 
+    {
+        <div>
+            <a 
+                [routerLink]="item.route" 
                 routerLinkActive="active" 
                 [routerLinkActiveOptions]="{ exact: true }" 
                 class="px-3 py-1 hover:bg-[#ffcc00] hover:text-black font-medium">
-                Trending
-                </a>
-            </div>
-                <a 
-                routerLink="search"  
-                [routerLinkActive]="'active'" 
-                class="px-3 py-1 hover:bg-[#ffcc00] hover:text-black font-medium">
-                Search
-                </a>
+                {{ item.label }}
+            </a>
+        </div>   
+    }
 </div>
 
 

@@ -1,4 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { environment } from '@environments/environment';
+
+
 
 @Component({
   selector: 'app-gifs-side-enterprise',
@@ -7,6 +10,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 })
 export class GifsSideEnterprise { 
-  
+  envs = environment
 
 }

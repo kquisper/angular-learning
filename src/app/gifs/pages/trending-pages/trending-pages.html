@@ -1,1 +1,8 @@
-<p>trending-pages works!</p>,
+<div>
+    <p class="pt-2 font-bold">Gifs Trending</p>
+    <hr class="my-2">
+    <app-gifs-list
+    [gifslist]="gifsServices.trendingGifs()"
+    />
+
+</div>
