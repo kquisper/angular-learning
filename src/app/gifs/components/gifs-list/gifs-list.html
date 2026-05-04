@@ -1,6 +1,6 @@
 
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    @for (item of gifslist(); track item) {
+    @for (item of gifslist(); track item.id) {
         <app-gifs-list-item [gif]="item.url"/>
     }
 </div>

@@ -10,8 +10,28 @@
                 class="px-3 py-1 hover:bg-[#ffcc00] hover:text-black font-medium">
                 {{ item.label }}
             </a>
-        </div>   
+        </div>      
     }
+
+    <div class="w-px h-6 bg-[#ccc] mx-2"></div>
+
+    @for (key of gifsService.searchHistorykey(); track key) 
+    {
+        <div>
+            <a 
+                [routerLink]="['/dashboard/history', key]" 
+                routerLinkActive="active" 
+                [routerLinkActiveOptions]="{ exact: true }" 
+                class="px-3 py-1 hover:bg-[#ffcc00] hover:text-black font-medium">
+                {{ key }}
+            </a>
+        </div>      
+    }
+
+
+
+
+
 </div>
 
 

@@ -20,22 +20,17 @@
               type="text"
               class="input-erp"
               placeholder="Ej. cats, funny, ryan gosling..."
+              (keyup.enter)="onsearch(txtSearch.value)"
+              #txtSearch
             />
-          </div>
-
-          <div class="pt-2 flex gap-2">
-            <button class="btn btn-primary px-6">Buscar</button>
-            <button class="btn btn-secondary px-6">Limpiar</button>
-          </div>
-
-          <!-- Estado -->
-          <div class="border-t border-[#999] pt-2 flex items-center gap-1">
-            <span class="w-2 h-2 rounded-full bg-[#ffcc00] inline-block border border-[#808080]"></span>
-            <span class="text-xs text-[#444]">Listo</span>
           </div>
 
         </div>
       </div>
+
+   
+
+      
     </div>
 
     <!-- Divisor -->
@@ -43,17 +38,14 @@
 
     <!-- PANEL DERECHO - Resultados -->
     <div class="flex-1">
-      <div class="erp-panel h-full">
 
-        <h3 class="text-sm font-bold border-b border-[#999] mb-3 pb-1 text-[#003399]">
-          Resultados
-        </h3>
 
-        <!-- app-gifs-list irá aquí -->
-        <p class="text-xs text-[#808080] italic">Ingrese un término y presione Buscar...</p>
 
-      </div>
+        <app-gifs-list [gifslist]="gifs()" />
+
     </div>
+
+    
 
   </div>
 </div>
